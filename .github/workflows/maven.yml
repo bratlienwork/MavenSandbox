@@ -30,11 +30,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
       
- build_test:
-    name: Build and Run Tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
+    - name: Checkout Code
         uses: actions/checkout@v1
       - name: Build and Run Tests
         run: mvn test --batch-mode --fail-at-end
