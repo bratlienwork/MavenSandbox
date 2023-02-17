@@ -38,5 +38,6 @@ jobs:
       uses: distributhor/workflow-webhook@v2 
       env:
           webhook_url: "https://pulse-7.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
+          webhook_secret: "Y0uR5ecr3t"
           data: '{ "weapon": "hammer", "drink" : "beer" }'
           #json: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}", "created_at": "${{github.event.pull_request.created_at}}", "updated_at": "${{github.event.pull_request.updated_at}}" }'
