@@ -44,7 +44,7 @@ jobs:
     - name: invoke parser pulse
       uses: distributhor/workflow-webhook@v2 
       env:
-          webhook_type: 'form-urlencoded'
+          webhook_type: 'json'
           webhook_url: "https://pulse-7.qtestnet.com/webhook/f3818df1-a54d-4369-acb8-9e4691b2e69a"
           webhook_secret: "Y0uR5ecr3t"
           json: '{ "event" }'
