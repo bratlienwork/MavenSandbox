@@ -33,6 +33,7 @@ jobs:
     - name: build and run tests
       run: mvn test --batch-mode --fail-at-end
     - name: Publish Test Report
+      if: success() || failure()
       uses: scacap/action-surefire-report@v1
     - name: invoke chatops pulse
       uses: muinmomin/webhook-action@v1.0.0
