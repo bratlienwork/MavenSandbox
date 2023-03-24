@@ -38,7 +38,7 @@ jobs:
       uses: muinmomin/webhook-action@v1.0.0
       with:
         url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
-        data: "{'command': 'publish'}"
+        data: '{"foo": "bar"}'
     - name: invoke parser pulse
       uses: jasongitmail/fast-webhook@v1
       with:
