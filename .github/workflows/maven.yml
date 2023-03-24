@@ -38,7 +38,6 @@ jobs:
       uses: joelwmale/webhook-action@master
         with:
           url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
-          headers: '{"repository": "joelwmale/webhook-action"}'
           body: '{"event": "deployment", "repository": "joelwmale/webhook-action"}'
     - name: invoke parser pulse
       uses: jasongitmail/fast-webhook@v1
