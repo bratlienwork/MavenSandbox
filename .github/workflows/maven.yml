@@ -41,19 +41,9 @@ jobs:
           webhook_secret: "Y0uR5ecr3t"
           data: '{ "weapon": "hammer", "drink" : "beer", "weapon": "brick", "drink" : "shot" }'
           json: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}", "created_at": "${{github.event.pull_request.created_at}}", "updated_at": "${{github.event.pull_request.updated_at}}" }'
-    #- name: invoke parser pulse
-    #  uses: distributhor/workflow-webhook@v2 
-    #  env:
-    #      webhook_type: 'json'
-    #      webhook_url: "https://pulse-7.qtestnet.com/webhook/f3818df1-a54d-4369-acb8-9e4691b2e69a"
-    #      webhook_secret: "Y0uR5ecr3t"
-    #      json: '{ "event" }'
    - name: Call Pulse Paswer Stage
       uses: fjogeleit/http-request-action@v1
       with:
         url: 'https://pulse-7.qtestnet.com/webhook/f3818df1-a54d-4369-acb8-9e4691b2e69a'
         method: 'POST'
-        #username: ${{ secrets.AWX_USER }}
-        #password: ${{ secrets.AWX_PASSWORD }}
-        #customHeaders: '{"Content-Type": "application/json"}'
         data: '{"key_1": "value_1", "key_2": "value_2"}'
