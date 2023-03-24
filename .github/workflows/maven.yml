@@ -43,4 +43,4 @@ jobs:
       uses: jasongitmail/fast-webhook@v1
       with:
         url: "https://pulse-7-container.qtestnet.com/webhook/53b32c57-368c-4b9b-a4e0-af11389c5438"
-        json: '{"foo": "bar"}'
+        json: '{"projectId": "106715", "testcycle": "4004081"}'
