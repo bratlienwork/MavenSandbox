@@ -35,10 +35,10 @@ jobs:
     - name: Publish Test Report
       uses: scacap/action-surefire-report@v1
     - name: invoke chatops pulse
-      uses: piranha/webhook-action@1.0.0
-    with:
-      url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
-      body: '{"text": "hello everyone"}'
+      uses: muinmomin/webhook-action@v1.0.0
+      with:
+        url: "https://pulse-7-container.qtestnet.com/webhook/f8525ead-f79b-4afb-8873-b374c421fb5c"
+        data: "{'command': 'publish'}"
     - name: invoke parser pulse
       uses: jasongitmail/fast-webhook@v1
       with:
